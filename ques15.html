@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    body,html{
+      margin: 0px;
+      padding:0px;
+      /* height:100%; */
+    }
+    .container{
+      width:100%;
+      height:1000px;
+      background-image: url(poster1.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: all linear 0.3s;
+      /* transform: scale(1); */
+      /* gap:20px; */
+    }
+    .logo{
+      font-size: bold;
+      font-size: 150px;
+      color: #FFF;
+      height:150px;
+      width:500px;
+      background-color: rgba(255, 0, 0, 0.575);
+      text-align: center;
+      line-height: 150px;
+       border-top: 10px solid red;
+       border-left: 10px solid red;
+      border-bottom: 10px solid red;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      position:fixed;
+      top:220px;
+      left:170px;
+      /* transition: all linear 0.3s; */
+      /* top:100px; */
+    }
+    .logo1{
+      font-size: bold;
+      font-size: 150px;
+      color:red;
+      height:150px;
+      width:500px;
+      background-color: #ffffff8c;
+      border:none;
+      border-top: 10px solid red;
+      border-bottom: 10px solid red;
+      text-align: center;
+      line-height: 150px;
+       border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-right: 10px solid red;
+      position: fixed;
+      top:220px;
+      right: 170px;
+      /* transition: all linear 0.3s; */
+      
+    }
+    .name{
+      position: fixed;
+      text-align: center;
+      left:600px;
+      top:100px;
+      /* right: 170px; */
+      width:450px;
+      height:200px;
+      color: #FFF;
+      z-index: 2;
+      font-size: 80px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: bold;
+      opacity: 0;
+      transition: all linear 0.6s;
+
+      /* background-color: black; */
+    }
+    .ironman{
+      width:100%;
+      height:300vh;
+      background-color: black;
+      position: relative;
+      overflow: hidden;
+      background-image: url(front.png);
+      background-position: top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      /* text-align: center;
+      font-size: 80px;
+      color:#FFF; */
+
+    }
+    .ironman #iron{
+      position: absolute;
+      top:800px;
+      width:400px;
+      height:400px;
+      z-index: 1;
+      /* background-color: aqua; */
+      
+    } 
+    
+    .ironman .small{
+      position: absolute;
+      width:100px;
+      height:100px;
+      right:0px;
+    }
+    .ironman  .iron1{
+      top:400px;
+      right:100px;
+    }
+    .ironman   .iron2{
+      top:600px;
+    }
+    .ironman  .iron3{
+      top:900px;
+      right:150px;
+    }
+    .ironman  .iron4{
+      top:800px;
+    }
+    .hidden{
+      opacity:0;
+    }
+    #head{
+      width:250px;
+      height:250px;
+      position: fixed;
+      top:0px;
+      left:400px;
+      z-index: 1;
+      opacity: 0;
+    }
+    .movie{
+      width:1000px;
+      height:100px;
+      /* background-color: #FFF; */
+      position: relative;
+      top:700px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap:30px;
+    }
+    .moviename{
+      width:250px;
+      height:250px;
+      /* background-color: aqua; */
+      border-radius: 20px;
+      border: 8px solid black;
+      /* z-index: 1; */
+      /* background-image: url(flying.png); */
+    }
+     .moviename img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    /* position: absolute; */
+    /* background-color: yellow; */
+   }
+   .moviename:hover{
+    transform: scale(1.5);
+    transition: all linear 0.3s;
+   }
+   .color{
+    width:110px;
+    height:110px;
+    background-image:linear-gradient(yellow,white);
+    position: fixed;
+    top:373px;
+    left:210px;
+    border-radius: 100%;
+    opacity: 0;
+    transition: all linear 0.3s;
+    /* lighting-color: red; */
+    /* z-index: 1; */
+   }
+   
+     .log{
+      width:200px;
+      height:200px;
+     }
+     .log img{
+      width:100%;
+      height: 100%;
+     }
+  </style>
+</head>
+<body>
+        <div class="container">
+          <div class="logo">Marvel</div>
+          <div class="logo1">Studios</div>
+          <div class="name">IRONMAN</div>
+        </div>
+        <div class="ironman">
+          <div class="color"></div>
+          <div id="image1"><img id="iron" src="i.png" alt=""></div>
+          <div><img id="head" src="helmet.png" alt=""></div>
+          <div class="movie">
+          <div class="moviename"><img src="./Jquery/film1.avif" alt=""></div>
+          <div class="moviename"><img src="./Jquery/film2.webp" alt=""></div>
+          <div class="moviename"><img src="./Jquery/film1.avif" alt=""></div>
+          <div class="moviename"><img src="./Jquery/film2.webp" alt=""></div>
+          <div class="moviename"><img src="./Jquery/film1.avif" alt=""></div>
+          <div class="moviename"><img src="./Jquery/film2.webp" alt=""></div>
+          <div class="moviename"><img src="./Jquery/film1.avif" alt=""></div>
+          <div class="moviename"><img src="./Jquery/film2.webp" alt=""></div>
+          </div>
+          <!-- <img class="small iron1" src="flying.png" alt="">
+          <img class="small iron2" src="flying.png" alt="">
+          <img class="small iron3" src="flying.png" alt="">
+          <img class="small iron4" src="flying.png" alt=""> -->
+          </div>
+         
+         
+
+    
+  <script src="./Jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
+  <script>
+    let logo=document.querySelector(".logo")
+    let logo1=document.querySelector(".logo1")
+    let container=document.querySelector(".container")
+    let ironman=document.querySelector("#iron")
+    let name=document.querySelector(".name")
+    let text=document.querySelector(".text")
+    let head=document.querySelector("#head")
+    let color=document.querySelector(".color")
+
+   window.addEventListener('scroll',()=>{
+    let value=window.scrollY;
+    console.log(value);
+    if (value!=0){
+    logo.style.left= -value  + 'px'
+    logo1.style.right= -value + 'px'
+    }
+    else if(value==0){
+      logo.style.left="170px"
+      logo1.style.right="170px"
+    }
+    if(value>=1024&&value<=2286){
+       ironman.style.left=value-1020 + 'px'
+      //  ironman.style.top=value-820 + 'px'
+    }
+   if(value>=1024&&value<=2300){
+    name.style.opacity=1
+    
+    head.style.opacity=1
+
+    // text.style.transform=`translateX(${value-1020}px)`
+   }
+   else{
+    name.style.opacity=0
+    
+    head.style.opacity=0
+   }
+   if(value>=2199&&value<=2286){
+    color.style.opacity=1
+    color.style.transform=`scale(${value/value*1.5})`
+
+   }
+   else{
+    color.style.opacity=0
+   }
+   })
+   $(function(){
+      function move(){
+      $(".iron1").animate({
+        right:"1500px",
+        top:"600px",
+      
+      },2000).queue(function(){
+        $(".iron1").addClass("hidden").dequeue()
+      }).animate({
+        right:"0px",
+        top:"400px",
+        
+      },100).queue(function(){
+        $(".iron1").removeClass("hidden").dequeue()
+      })
+    }
+    setInterval(move,500)
+    function move2(){
+      $(".iron2").animate({
+        right:"1500px",
+        top:"800px",
+      
+      },2000).queue(function(){
+        $(".iron2").addClass("hidden").dequeue()
+      }).animate({
+        right:"0px",
+        top:"600px",
+        
+      },100).queue(function(){
+        $(".iron2").removeClass("hidden").dequeue()
+      })
+    }
+    setInterval(move2,500)
+    function move3(){
+      $(".iron3").animate({
+        right:"1500px",
+        top:"1000px",
+      
+      },2000).queue(function(){
+        $(".iron3").addClass("hidden").dequeue()
+      }).animate({
+        right:"0px",
+        top:"900px",
+        
+      },100).queue(function(){
+        $(".iron3").removeClass("hidden").dequeue()
+      })
+    }
+    setInterval(move3,500)
+    function move4(){
+      $(".iron4").animate({
+        right:"1500px",
+        top:"1200px",
+      
+      },2000).queue(function(){
+        $(".iron4").addClass("hidden").dequeue()
+      }).animate({
+        right:"0px",
+        top:"800px",
+        
+      },100).queue(function(){
+        $(".iron4").removeClass("hidden").dequeue()
+      })
+    }
+    setInterval(move4,500)
+   })
+   
+ 
+  </script>
+</body>
+</html>
